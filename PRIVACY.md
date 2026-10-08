@@ -1,56 +1,73 @@
 # MySafeBox Privacy Policy
 
-_Last updated: October 5, 2026_
+Effective 8 October 2026
 
-MySafeBox is designed so that your data stays yours. The developer does not collect, store, or have access to any of your personal data.
+MySafeBox is a password and private-information vault. It is built so that your vault stays on your device and the developer never has access to it. This policy explains what the app does with your information.
 
-## Summary
+## The short version
 
-- **No data collection.** MySafeBox has no accounts, no analytics, no advertising, and no tracking.
-- **Your vault stays on your device**, encrypted.
-- **Backups and shared items are encrypted** before they leave your device.
-- The developer runs **no servers** and receives none of your data.
+- Your vault is stored only on your device, encrypted with a key that never leaves it.
+- The developer runs no servers and collects no data about you: no accounts, no analytics, no advertising, and no tracking.
+- A few optional features use services from Apple or Have I Been Pwned. They are described below, along with exactly what they receive.
 
-## Data stored on your device
+## Your vault
 
-Items you add (passwords, cards, IDs, banking details, Wi-Fi networks, notes, photos, and attachments) are stored only on your device. They are encrypted with AES-GCM, using a key kept in the iOS Keychain that never leaves the device. Your master passcode is never stored. Only a salted PBKDF2 hash of it is kept, to check the passcode when you unlock.
+Everything you save in MySafeBox — logins, notes, cards, IDs, bank details, Wi-Fi networks, photos, and attachments — is encrypted with AES-256 and stored on your device. The encryption key is kept in your device's Keychain and is never sent anywhere. Your master passcode itself is never stored; only a slow, salted PBKDF2 hash used to check it.
 
-**Face ID / Touch ID** is handled entirely by iOS. MySafeBox only receives a yes/no result and never has access to your biometric data.
+The developer cannot see, recover, or reset your vault or your master passcode. If you forget your passcode or lose your device without a backup, your data cannot be recovered.
 
-**Clipboard.** When you copy a value, it's kept on this device only and cleared automatically after 60 seconds.
+When you copy a value, it stays on this device only and is cleared from the clipboard automatically after 60 seconds.
 
 ## Backups
 
-When you export a backup, the file is encrypted with a key derived from your master passcode. It's saved wherever you choose, such as iCloud Drive. The developer has no access to backup files, and they can't be opened without your passcode.
+When you export a backup, MySafeBox creates an encrypted folder protected by your master passcode, and saves it wherever you choose, such as iCloud Drive or another location in the Files app. The developer never receives your backups.
+
+## Face ID, camera, and photos
+
+- **Face ID or Touch ID** is handled by iOS. MySafeBox only learns whether it succeeded.
+- **Camera and photo library** access is used only when you choose to add a photo to an item. Photos are encrypted and stored in your vault like everything else.
+
+## AutoFill
+
+If you turn on MySafeBox for AutoFill, iOS can fill your saved logins in other apps and websites. To show suggestions above the keyboard, MySafeBox gives iOS each login's website and username. Passwords are never given to iOS's suggestion list; they're filled in only after you unlock MySafeBox. You can turn suggestions off in MySafeBox's AutoFill settings.
 
 ## Sharing with trusted contacts
 
-If you use sharing, MySafeBox uses Apple's iCloud (CloudKit) to connect you with the people you invite:
+Sharing is optional and uses Apple's iCloud (CloudKit) in your own iCloud account. When you use it:
 
-- **Shared items are end-to-end encrypted** on your device for each recipient. Apple and the developer can't read them.
-- **Your contact card** contains the display name you choose and public encryption keys. It's visible only to the contacts you connect with.
-- **Invitations.** The email address you enter is used to look up the person's Apple Account through iCloud and to prepare the invitation. Your list of contacts is stored encrypted on your device.
+- To invite someone, MySafeBox passes their email address to Apple's iCloud so the invitation can reach them.
+- Each person's sharing name and public encryption keys are stored in the shared iCloud space between the two of you, so you can verify each other with a safety code.
+- Shared items are end-to-end encrypted on your device for each recipient. Apple and the developer cannot read them; only your contact's device can.
 
-This data is stored in your iCloud account and your contacts' iCloud accounts, under Apple's [privacy policy](https://www.apple.com/legal/privacy/). Stopping a share deletes that item's shared copies. Removing a contact or erasing your vault ends the connection, removing both people's access to everything shared through it.
+This information is stored by Apple under Apple's privacy policy, not by the developer. Removing a contact, or erasing your data, ends the connection: the person who sent the invitation deletes the shared space, and the person who accepted it leaves it.
+
+## Leaked password check
+
+If you choose to check for leaked passwords, MySafeBox uses the Pwned Passwords service from Have I Been Pwned (haveibeenpwned.com). For each password, only the first 5 characters of a scrambled (SHA-1 hashed) form are sent. The service replies with a list of leaked password hashes that start the same way, and the match is made on your device. Your passwords, usernames, and other details are never sent.
+
+The results are saved in your vault, encrypted, so warnings stay visible until you check again.
 
 ## Purchases
 
-Purchases (the Full Version and optional tips) are processed by Apple through the App Store. The developer doesn't receive your payment details or personal information.
+The Full Version and tips are purchased through Apple's App Store. Apple processes the payment; the developer receives no payment details and only learns, through Apple, that a purchase was made.
 
 ## Children
 
-MySafeBox doesn't knowingly collect any information from anyone, including children.
+MySafeBox is not directed at children and does not knowingly collect information from anyone.
 
-## Deleting your data
+## Your rights and deleting your data
 
-- **Erase Vault** (More (…) → Erase Vault…) deletes all items and sharing data from your device and ends sharing in iCloud.
+Because the developer does not collect or hold your personal information, there is nothing held by the developer to access, correct, or delete. You stay in control of everything MySafeBox stores:
+
+- **Erase All Data** (More → Erase All Data…) deletes every item and all sharing data on your device, and ends sharing in iCloud.
 - **Deleting the app** removes the vault from your device.
-- Backup files you exported stay where you saved them until you delete them.
+- Backups you exported stay where you saved them until you delete them.
+- Data stored in iCloud for sharing is managed by Apple and your iCloud account settings.
 
 ## Changes to this policy
 
-If this policy changes, the updated version will be posted here with a new "Last updated" date.
+If this policy changes, the new version will be included in the app and published with a new effective date.
 
 ## Contact
 
-Questions about privacy? [Open an issue](https://github.com/s544v2nj4s/MySafeBox-Support/issues/new). Please don't include any private data.
+MySafeBox is published by the developer shown as the seller on its App Store page. For questions about this policy, open an issue at github.com/s544v2nj4s/MySafeBox-Support. Please never include passwords or other private data, because issues are public.
