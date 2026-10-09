@@ -6,6 +6,7 @@ MySafeBox is a private, encrypted vault for your iPhone and iPad. Keep passwords
 - [Free and Full Version](#free-and-full-version)
 - [AutoFill](#autofill)
 - [Password Problems and leaked passwords](#password-problems-and-leaked-passwords)
+- [Previous passwords](#previous-passwords)
 - [Vaults](#vaults)
 - [Backup and restore](#backup-and-restore)
 - [Sharing with trusted contacts](#sharing-with-trusted-contacts)
@@ -78,6 +79,10 @@ MySafeBox can fill your saved logins in other apps and in Safari, and save new o
 
 The check uses Have I Been Pwned. Only the first 5 characters of a scrambled (hashed) form of each password are sent, and the comparison happens on your device. **Only passwords are checked.** Usernames, emails, notes, and card or bank details are never sent. Results are saved in your vault, so warnings stay until you change the password or check again. Tap **Check Again** from time to time, because new breaches are added.
 
+## Previous passwords
+
+When you change a login's password, the old one is kept in the item's **History** section, with the date it was changed. Tap the eye to show it or the copy button to copy it. To remove them, tap **Edit** → **Clear Previous Passwords**, then save. This can't be undone.
+
 ## Vaults
 
 Vaults group items for a purpose, such as a trip or family documents. An item can be in several vaults; items in none are **Ungrouped**.
@@ -136,6 +141,8 @@ Edits you make are sent to your contacts automatically. They see the item in **S
 ## Recently Deleted and erasing your data
 
 **Recently Deleted:** deleted items are kept for 30 days in **More (…) → Recently Deleted**, where you can restore them or delete them permanently.
+
+To restore or delete several at once, tap the **…** menu → **Select Items…**, pick the items, then choose **Restore** or **Delete Now**. The same menu has **Restore All** and **Delete All Now**.
 
 **Erase All Data:** **More (…) → Erase All Data…** permanently deletes every item and attachment on this device, including Recently Deleted and all your vaults, stops everything you share, and removes your trusted contacts. You need your master passcode to confirm.
 
